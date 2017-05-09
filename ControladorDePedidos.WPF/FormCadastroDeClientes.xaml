@@ -1,0 +1,62 @@
+﻿<Window xmlns:Controls="clr-namespace:dn32ImageButton.Controls;assembly=dn32Layout" 
+        x:Class="ControladorDePedidos.WPF.FormCadastroDeClientes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControladorDePedidos.WPF"
+        mc:Ignorable="d"
+        Title="Cadastro de Clientes" Height="277.465" Width="556.208"  ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen" Background="#FFCCCEDB" FontStyle="Italic" FontWeight="Bold"
+        >
+
+    <Window.Resources>
+        <ResourceDictionary Source="/dn32Layout;component/Themes/dn32ImageButton.xaml"/>
+    </Window.Resources>
+
+    <Grid Background="#FFCCCEDB">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <!--Bloco Código-->
+
+        <!--Bloco Nome-->
+        <TextBox Text="{Binding Nome}" Name="txtNome" HorizontalAlignment="Left" Height="24" Margin="93,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="407"/>
+        <TextBlock Name="tbNome" HorizontalAlignment="Left" Margin="32,28,0,0" TextWrapping="Wrap" Text="Nome:" VerticalAlignment="Top" TextAlignment="Right" Width="56" FontWeight="Bold" FontStyle="Italic"/>
+
+        <!--Bloco Data de nascimento-->
+        <TextBlock Name="tbDataNascimento" HorizontalAlignment="Left" Margin="10,65,0,0" TextWrapping="Wrap" Text="Data de Nasc:" VerticalAlignment="Top" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBox Text="{Binding DataDeNascimento}" Name="txtDataNascimento" HorizontalAlignment="Left" Height="24" Margin="93,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109"/>
+
+        <!--Bloco cpf-->
+        <TextBlock Name="tbCPF" HorizontalAlignment="Left" Margin="210,68,0,0" TextWrapping="Wrap" Text="CPF:" VerticalAlignment="Top" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBox Text="{Binding CPF}" Name="txtCPF"  HorizontalAlignment="Left" Height="23" Margin="240,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <!--Bloco rg-->
+        <TextBlock  Name="tbRG"  HorizontalAlignment="Left" Margin="365,68,0,0" TextWrapping="Wrap" Text="RG:" VerticalAlignment="Top" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBox Text="{Binding RG}" Name="txtRG"  HorizontalAlignment="Left" Height="23" Margin="389,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111"/>
+
+        <!--Bloco telefone-->
+        <TextBlock Name="tbTelefone"  HorizontalAlignment="Left" Margin="37,106,0,0" TextWrapping="Wrap" Text="Telefone:" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold"/>
+        <TextBox Text="{Binding Telefone}" Name="txtTelefone"  HorizontalAlignment="Left" Height="24" Margin="93,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="109"/>
+
+        <!--Bloco endereço-->
+        <TextBlock Name="tbEndereco"  HorizontalAlignment="Left" Margin="210,106,0,0" TextWrapping="Wrap" Text="Endereço:" VerticalAlignment="Top" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBox Text="{Binding Endereco}" Name="txtEndereco"  HorizontalAlignment="Left" Height="23" Margin="269,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="231"/>
+
+        <!--Bloco cidade-->
+        <TextBlock Name="tbCidade"  HorizontalAlignment="Left" Margin="46,138,0,0" TextWrapping="Wrap" Text="Cidade:" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold"/>
+        <TextBox Text="{Binding Cidade}" Name="txtCidade"  HorizontalAlignment="Left" Height="22" Margin="93,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="171"/>
+
+        <!--Bloco uf-->
+        <TextBlock Name="tbUF"  HorizontalAlignment="Left" Margin="269,138,0,0" TextWrapping="Wrap" Text="UF:" VerticalAlignment="Top" FontStyle="Italic" FontWeight="Bold"/>
+        <TextBox Text="{Binding Estado}" Name="txtUF" KeyDown="txtUF_KeyDown"  HorizontalAlignment="Left" Height="23" Margin="292,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"  />
+
+        <!--Botão Salvar-->
+        <Controls:dn32ImageButton x:Name="btnSalvar"
+                                  Style="{DynamicResource dn32ButtonStyle}"
+                                  Text="Salvar"
+                                  NormalImage="/dn32Layout;component/img/salvar.png"
+                                  ImageSize="24" FontSize="12" Padding="0 2 0 2" Margin="0,0,10,10" HorizontalAlignment="Right" Width="65" Click="btnSalvar_Click" Height="52" VerticalAlignment="Bottom" />
+    </Grid>
+</Window>

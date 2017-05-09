@@ -1,0 +1,66 @@
+﻿<Window xmlns:Controls="clr-namespace:dn32ImageButton.Controls;assembly=dn32Layout" 
+        x:Class="ControladorDePedidos.WPF.FormCadastroDeProdutos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControladorDePedidos.WPF"
+        mc:Ignorable="d"
+        Title="Cadastro de Produtos" Height="241.967" Width="471.095" 
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded" Background="#FFCCCEDB">
+
+    <Window.Resources>
+        <ResourceDictionary Source="/dn32Layout;component/Themes/dn32ImageButton.xaml"/>
+    </Window.Resources>
+
+    <Grid Background="#FFCCCEDB">
+        <!--Bloco Nome-->
+        <TextBox Text="{Binding Nome}" Name="txtNome" HorizontalAlignment="Left" Height="18" Margin="59,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="388" RenderTransformOrigin="0.5,0.5" FontWeight="Bold" FontStyle="Italic">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.056"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBlock Name="tbNome" HorizontalAlignment="Left" Margin="8,33,0,0" TextWrapping="Wrap" Text="Nome:" VerticalAlignment="Top" Width="40" FontWeight="Bold" FontStyle="Italic" TextAlignment="Right"/>
+
+        <!--Bloco Marca-->
+        <ComboBox  x:Name="cmbMarcas" HorizontalAlignment="Left" Margin="58,60,0,0" VerticalAlignment="Top" Width="146" ItemsSource="{Binding}" SelectedValuePath="Codigo" DisplayMemberPath="Nome" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBlock x:Name="tbMarca" HorizontalAlignment="Left" Margin="5,62,0,0" TextWrapping="Wrap" Text="Marca:" VerticalAlignment="Top" Width="43" FontWeight="Bold" FontStyle="Italic" TextAlignment="Right"/>
+
+        <!--Bloco Valor De Compra-->
+        <TextBlock  x:Name="tbValorDeCompra" HorizontalAlignment="Left" Margin="214,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106" Text="Valor De Compra:" FontWeight="Bold" FontStyle="Italic" TextAlignment="Right"/>
+        <TextBox Text="{Binding ValorDeCompra}" x:Name="txtValorDeCompra" HorizontalAlignment="Left" Height="19" Margin="325,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" FontWeight="Bold" FontStyle="Italic"/>
+
+        <!--Bloco Valor de Venda-->
+        <TextBox Text="{Binding ValorDeVenda}"  x:Name="txtValorDeVenda" HorizontalAlignment="Left" Height="20" Margin="105,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="99" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBlock x:Name="tbValorDeVenda" HorizontalAlignment="Left" Margin="5,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" Text="Valor De Venda:" FontWeight="Bold" FontStyle="Italic" TextAlignment="Right"/>
+
+        <!--Bloco Quantidade em Estoque-->
+        <TextBlock x:Name="tbQuantidadeEmEstoque" HorizontalAlignment="Left" Margin="46,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" Text="Estoque:" FontWeight="Bold" FontStyle="Italic" TextAlignment="Right"/>
+        <TextBox Text="{Binding QuantidadeEmEstoque}" x:Name="txtQuantidadeEmEstoque" HorizontalAlignment="Left" Height="19" Margin="105,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="99" FontWeight="Bold" FontStyle="Italic"/>
+
+        <!--Bloco Estoque Minimo-->
+        <TextBlock x:Name="tbEstoqueMinimo" HorizontalAlignment="Left" Margin="267,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="53" Text="Mínimo:" FontWeight="Bold" FontStyle="Italic" TextAlignment="Right"/>
+        <TextBox Text="{Binding QuantidadeMinimaEmEstoque}" x:Name="txtEstoqueMinino" HorizontalAlignment="Left" Height="18" Margin="327,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="121" FontWeight="Bold" FontStyle="Italic"/>
+
+        <!--Bloco Estoque Desejavel-->
+        <TextBlock x:Name="tbEstoqueDesejavel" HorizontalAlignment="Left" Margin="40,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Text="Desejável:" FontWeight="Bold" FontStyle="Italic" TextAlignment="Right"/>
+        <TextBox Text="{Binding QuantidadeDesejavelEmEstoque}" x:Name="txtEstoqueDesejavel" HorizontalAlignment="Left" Height="18" Margin="105,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="99" FontWeight="Bold" FontStyle="Italic"/>
+
+        <!--Botão Salvar-->
+        <Controls:dn32ImageButton x:Name="btnSalvar"
+                                  Style="{DynamicResource dn32ButtonStyle}"
+                                  Text="Salvar"
+                                  NormalImage="/dn32Layout;component/img/salvar.png"
+                                  ImageSize="24" FontSize="12" 
+                                  Padding="0 2 0 2" Margin="0,0,24,10" Click="btnSalvar_Click" FontWeight="Bold" FontStyle="Italic" Height="50" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="68" />
+        <ComboBox  x:Name="cmbFornecedor" HorizontalAlignment="Left" Margin="285,60,0,0" VerticalAlignment="Top" Width="163" ItemsSource="{Binding}" SelectedValuePath="Codigo" DisplayMemberPath="Nome" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBlock x:Name="tbFornecedor" HorizontalAlignment="Left" Margin="209,62,0,0" TextWrapping="Wrap" Text="Fornecedor:" VerticalAlignment="Top" Width="69" FontWeight="Bold" FontStyle="Italic" TextAlignment="Right"/>
+
+    </Grid>
+</Window>

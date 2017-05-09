@@ -1,0 +1,27 @@
+﻿<Window xmlns:Controls="clr-namespace:dn32ImageButton.Controls;assembly=dn32Layout" 
+        x:Class="ControladorDePedidos.WPF.FormCadastroDeMarcas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControladorDePedidos.WPF"
+        mc:Ignorable="d"
+        Title="Cadastro de Marcas" Height="185.149" Width="448.69" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FFCCCEDB" FontStyle="Italic" FontWeight="Bold">
+
+    <Window.Resources>
+        <ResourceDictionary Source="/dn32Layout;component/Themes/dn32ImageButton.xaml"/>
+    </Window.Resources>
+
+    <Grid>
+        <!--Bloco Nome-->
+        <TextBox Name="txtNome" HorizontalAlignment="Left" Height="23" Margin="96,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="325" Grid.ColumnSpan="2"/>
+        <TextBlock Name="tbNome" HorizontalAlignment="Left" Margin="28,45,0,0" TextWrapping="Wrap" Text="Nome:" VerticalAlignment="Top" FontSize="16" TextAlignment="Right" Width="56"/>
+
+        <!--Botão Salvar-->
+        <Controls:dn32ImageButton x:Name="btnSalvar"
+                                  Style="{DynamicResource dn32ButtonStyle}"
+                                  Text="Salvar"
+                                  NormalImage="/dn32Layout;component/img/salvar.png"
+                                  ImageSize="24" FontSize="12" Padding="0 2 0 2" Margin="368,0,10,10" Click="btnSalvar_Click" Grid.ColumnSpan="2" Height="56" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>

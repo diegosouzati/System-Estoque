@@ -1,0 +1,27 @@
+﻿<Window xmlns:Controls="clr-namespace:dn32ImageButton.Controls;assembly=dn32Layout"
+        x:Class="ControladorDePedidos.WPF.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControladorDePedidos.WPF"
+        mc:Ignorable="d"
+        Title="DS System Comercio - Menu Principal" Height="170.842" Width="420.526"
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FFCCCEDB" 
+        Loaded="Window_Loaded" FontWeight="Bold" FontStyle="Italic" WindowStyle="None">
+
+    <Window.Resources>
+        <ResourceDictionary Source="/dn32Layout;component/Themes/dn32ImageButton.xaml"></ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <TextBlock Name="tbUsuario" HorizontalAlignment="Left" Margin="54,36,0,0" TextWrapping="Wrap" Text="Usuário:" VerticalAlignment="Top"/>
+        <ComboBox  x:Name="cmbUsuario" HorizontalAlignment="Left" Margin="108,36,0,0" VerticalAlignment="Top" Width="256" ItemsSource="{Binding}" SelectedValuePath="Codigo" DisplayMemberPath="Nome" FontWeight="Bold" FontStyle="Italic"/>
+
+        <TextBlock Name="tbPassword" HorizontalAlignment="Left" Margin="44,73,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top"/>
+        <PasswordBox Name="txtPassword" Margin="108,72,57,81"/>
+
+        <Button Name="btnLogin" Content="Login" Margin="130,107,193,38" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="btnLogin_Click"/>
+        <Button x:Name="btnSair" Content="Sair" Margin="233,107,90,38" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="btnSair_Click"/>
+    </Grid>
+</Window>

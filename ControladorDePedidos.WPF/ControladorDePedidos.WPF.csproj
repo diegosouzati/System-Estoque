@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DD52A6FA-0C05-4562-AF56-111DC9F0183D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ControladorDePedidos.WPF</RootNamespace>
+    <AssemblyName>Controlador de pedidos</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Diego Souza\Desktop\Applicaçao\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>pt-BR</TargetCulture>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Ecommerce.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>16E11E0F426878B9B80C7B9741B0E70F20E76A4F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ControladorDePedidos.WPF_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="dn32Layout, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\dn32Layout.WPF.1.0.4\lib\dn32Layout.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Conversores\ConversorDeData.cs" />
+    <Compile Include="Conversores\ConversorDeEstoque.cs" />
+    <Compile Include="FormBuscaDeVendedor.xaml.cs">
+      <DependentUpon>FormBuscaDeVendedor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuscaDeCliente.xaml.cs">
+      <DependentUpon>FormBuscaDeCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormBuscaDeProduto.xaml.cs">
+      <DependentUpon>FormBuscaDeProduto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroDeFornecedores.xaml.cs">
+      <DependentUpon>FormCadastroDeFornecedores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroDeVendedor.xaml.cs">
+      <DependentUpon>FormCadastroDeVendedor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroDeClientes.xaml.cs">
+      <DependentUpon>FormCadastroDeClientes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroDeVendas.xaml.cs">
+      <DependentUpon>FormCadastroDeVendas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroDeCompras.xaml.cs">
+      <DependentUpon>FormCadastroDeCompras.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroDeMarcas.xaml.cs">
+      <DependentUpon>FormCadastroDeMarcas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroDeProdutos.xaml.cs">
+      <DependentUpon>FormCadastroDeProdutos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastroDeUsuarios.xaml.cs">
+      <DependentUpon>FormCadastroDeUsuarios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormFornecedores.xaml.cs">
+      <DependentUpon>FormFornecedores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormSuporte.xaml.cs">
+      <DependentUpon>FormSuporte.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormVendedores.xaml.cs">
+      <DependentUpon>FormVendedores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormClientes.xaml.cs">
+      <DependentUpon>FormClientes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormVendas.xaml.cs">
+      <DependentUpon>FormVendas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormCompras.xaml.cs">
+      <DependentUpon>FormCompras.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormMarcas.xaml.cs">
+      <DependentUpon>FormMarcas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormProdutos.xaml.cs">
+      <DependentUpon>FormProdutos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FormUsuarios.xaml.cs">
+      <DependentUpon>FormUsuarios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utilitarios.cs" />
+    <Page Include="FormBuscaDeVendedor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormBuscaDeCliente.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormBuscaDeProduto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormCadastroDeFornecedores.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormCadastroDeVendedor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormCadastroDeClientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormCadastroDeVendas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormCadastroDeCompras.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormCadastroDeMarcas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormCadastroDeProdutos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormCadastroDeUsuarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormFornecedores.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormSuporte.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormVendedores.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormClientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormVendas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FormCompras.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormMarcas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormProdutos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FormMenuPrincipal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FormMenuPrincipal.xaml.cs">
+      <DependentUpon>FormMenuPrincipal.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="FormUsuarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ControladorDePedidos.WPF_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\close.png" />
+    <Resource Include="img\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ds.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\fechar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\financeiro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\vendedores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\suporte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ControladorDePedidos.Modelo\ControladorDePedidos.Modelo.csproj">
+      <Project>{27a92fcd-c52c-4e72-8866-38d03eb79f3b}</Project>
+      <Name>ControladorDePedidos.Modelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControladorDePedidos.Repositorio\ControladorDePedidos.Repositorio.csproj">
+      <Project>{c2825c5e-dd4f-450d-8b45-b4f5f5678175}</Project>
+      <Name>ControladorDePedidos.Repositorio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\adicionar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\atualizar.png" />
+    <Resource Include="img\delete.png" />
+    <Resource Include="img\edite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\novo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\compra.png" />
+    <Resource Include="img\efetivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\vendas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ecommerce.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

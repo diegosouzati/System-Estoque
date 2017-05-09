@@ -1,0 +1,79 @@
+﻿<Window xmlns:Controls="clr-namespace:dn32ImageButton.Controls;assembly=dn32Layout"
+        x:Class="ControladorDePedidos.WPF.FormCompras"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControladorDePedidos.WPF"
+        mc:Ignorable="d"
+        Title="Compras" Height="434" Width="871.755" WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Loaded="Window_Loaded" Background="#FFCCCEDB" FontWeight="Bold" FontStyle="Italic"
+        xmlns:app="clr-namespace:ControladorDePedidos.WPF"
+        Language="pt-BR"
+        >
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/dn32Layout;component/Themes/dn32ImageButton.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+            <app:ConversorDeData x:Key="ConversorDeData" />
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Controls:dn32ImageButton x:Name="btnNovo"
+                                  Style="{DynamicResource dn32ButtonStyle}"
+                                  Text="Novo"
+                                  NormalImage="/Controlador de pedidos;component/img/novo.png" 
+                                  HorizontalAlignment="Left" VerticalAlignment="Top"
+                                  ImageSize="32" FontSize="12" Width="72" Height="62" Padding="0 2 0 2" Click="btnNovo_Click" Margin="10,5,0,0"/>
+
+        <Controls:dn32ImageButton x:Name="btnEditar"
+            Style="{DynamicResource dn32ButtonStyle}"
+            Text="Editar"
+            NormalImage="/Controlador de pedidos;component/img/edite.png" 
+            HorizontalAlignment="Left" VerticalAlignment="Top"
+            ImageSize="32" FontSize="12" Width="72" Height="62" Padding="0 2 0 2" Margin="87,5,0,0" Click="btnEditar_Click" />
+
+        <Controls:dn32ImageButton x:Name="btnAtualizar"
+            Style="{DynamicResource dn32ButtonStyle}"
+            Text="Atualizar"
+           NormalImage="/Controlador de pedidos;component/img/atualizar.png"  
+            HorizontalAlignment="Left" VerticalAlignment="Top"
+            ImageSize="32" FontSize="12" Width="72" Height="62" Padding="0 2 0 2" Margin="164,5,0,0" Click="btnAtualizar_Click"/>
+
+        <Controls:dn32ImageButton x:Name="btnExcluir"
+            Style="{DynamicResource dn32ButtonStyle}"
+            Text="Excluir"
+            NormalImage="/Controlador de pedidos;component/img/delete.png" 
+            HorizontalAlignment="Left" VerticalAlignment="Top"
+            ImageSize="32" FontSize="12" Width="72" Height="62" Padding="0 2 0 2" Margin="241,5,0,0" Click="btnExcluir_Click"/>
+
+
+        <ListView Name="lstCompras" ItemsSource="{Binding}" SelectionMode="Single" Margin="10,72,10,10" Background="#FFEBEDEE">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Valor total" Width="120" DisplayMemberBinding="{Binding ValorTotal, StringFormat='{}{0:C}'}" />
+                    <GridViewColumn Header="Quantidade de Produtos" Width="150" DisplayMemberBinding="{Binding QuantidadeDeProdutos}" />
+                    <GridViewColumn Header="Data do cadastro" Width="130" DisplayMemberBinding="{Binding Path=DataDeCadastro, Converter={StaticResource ConversorDeData}}" />
+                    <GridViewColumn Header="Data da Compra" Width="150" DisplayMemberBinding="{Binding Path='DataDeEfetivacao', Converter={StaticResource ConversorDeData}}" />
+                    <GridViewColumn Header="Data do recebimento" Width="140" DisplayMemberBinding="{Binding Path='DataDeRecebimento', Converter={StaticResource ConversorDeData}}" />
+                    <GridViewColumn Header="Status" Width="130" DisplayMemberBinding="{Binding Status}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Controls:dn32ImageButton x:Name="btnCompraEfetuada"
+            Style="{DynamicResource dn32ButtonStyle}"
+            Text="Compra Efetuada"
+            NormalImage="/Controlador de pedidos;component/img/compra.png" VerticalAlignment="Top"
+            ImageSize="32" FontSize="12" Height="62" Padding="0 2 0 2" Margin="0,5,128,0" HorizontalAlignment="Right" Width="114" Click="btnCompraEfetuada_Click" />
+
+        <Controls:dn32ImageButton x:Name="btnCompraRecebida"
+            Style="{DynamicResource dn32ButtonStyle}"
+            Text="Compra Recebida"
+            NormalImage="/Controlador de pedidos;component/img/efetivo.png" VerticalAlignment="Top"
+            ImageSize="32" FontSize="12" Height="62" Padding="0 2 0 2" Margin="0,5,10,0" HorizontalAlignment="Right" Width="113" Click="btnCompraRecebida_Click" />
+    </Grid>
+</Window>

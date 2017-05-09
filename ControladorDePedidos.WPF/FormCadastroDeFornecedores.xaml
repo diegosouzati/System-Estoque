@@ -1,0 +1,60 @@
+﻿<Window xmlns:Controls="clr-namespace:dn32ImageButton.Controls;assembly=dn32Layout" 
+        x:Class="ControladorDePedidos.WPF.FormCadastroDeFornecedores"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControladorDePedidos.WPF"
+        mc:Ignorable="d"
+        Title="Cadastro de Fornecedores" Height="305.273" Width="762.233"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FFCCCEDB" FontStyle="Italic" FontWeight="Bold">
+
+    <Window.Resources>
+        <ResourceDictionary Source="/dn32Layout;component/Themes/dn32ImageButton.xaml"/>
+    </Window.Resources>
+
+    <Grid>
+        <!--Bloco Código-->
+
+        <!--Bloco Nome-->
+        <TextBox Text="{Binding Nome}" Name="txtNome" HorizontalAlignment="Left" Height="23" Margin="101,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="635"/>
+        <TextBlock Name="tbNome" HorizontalAlignment="Left" Margin="38,31,0,0" TextWrapping="Wrap" Text="Nome:" VerticalAlignment="Top" TextAlignment="Right" Width="58" FontSize="14"/>
+
+        <TextBox Text="{Binding Endereco}" x:Name="txtEndereco" HorizontalAlignment="Left" Height="23" Margin="102,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="396"/>
+        <TextBlock x:Name="tbEndereco" HorizontalAlignment="Left" Margin="21,69,0,0" TextWrapping="Wrap" Text="Endereço:" VerticalAlignment="Top" TextAlignment="Right" Width="76" FontSize="14"/>
+
+        <TextBox Text="{Binding Complemento}" Name="txtComplemento" HorizontalAlignment="Left" Height="23" Margin="606,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130"/>
+        <TextBlock  Name="tbComplemento" HorizontalAlignment="Left" Margin="503,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" Height="21" TextAlignment="Right" Width="98" Text="Complemento:"/>
+
+        <TextBox Text="{Binding Bairro}"  Name="txtBairro" HorizontalAlignment="Left" Height="22" Margin="101,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
+        <TextBlock Name="tbBairro" HorizontalAlignment="Left" Margin="51,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Bairro:" FontStyle="Italic" FontSize="14" TextAlignment="Right" Height="20" Width="46"/>
+
+        <TextBox Text="{Binding Cidade}" Name="txtCidade" HorizontalAlignment="Left" Height="23" Margin="331,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <TextBlock Name="tbCidade" HorizontalAlignment="Left" Margin="276,106,0,0" TextWrapping="Wrap" Text="Cidade:" VerticalAlignment="Top" FontStyle="Italic" FontSize="14" TextAlignment="Right" Width="50"/>
+
+        <TextBox Text="{Binding Cep}" Name="txtCep" HorizontalAlignment="Left" Height="23" Margin="587,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149"/>
+        <TextBlock Name="tbCep" HorizontalAlignment="Left" Margin="547,106,0,0" TextWrapping="Wrap" Text="Cep:" VerticalAlignment="Top" FontStyle="Italic" FontSize="14" TextAlignment="Right" Width="29"/>
+
+        <TextBox Text="{Binding Telefone}" Name="txtTelefone" HorizontalAlignment="Left" Height="22" Margin="102,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
+        <TextBlock Name="tbTelefone" HorizontalAlignment="Left" Margin="36,136,0,0" TextWrapping="Wrap" Text="Telefone:" VerticalAlignment="Top" FontStyle="Italic" FontSize="14" TextAlignment="Right" Width="61"/>
+
+        <TextBox Text="{Binding Celular}" Name="txtCelular" HorizontalAlignment="Left" Height="23" Margin="333,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
+        <TextBlock Name="tbCelular" HorizontalAlignment="Left" Margin="276,140,0,0" TextWrapping="Wrap" Text="Celular:" VerticalAlignment="Top" FontStyle="Italic" FontSize="14" TextAlignment="Right" Width="52"/>
+
+        <TextBox Text="{Binding CNPJ}" Name="txtCNPJ" HorizontalAlignment="Left" Height="23" Margin="587,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149"/>
+        <TextBlock Name="tbCNPJ" HorizontalAlignment="Left" Margin="538,140,0,0" TextWrapping="Wrap" Text="CNPJ:" VerticalAlignment="Top" FontStyle="Italic" FontSize="14" TextAlignment="Right" Width="40"/>
+
+        <TextBox Text="{Binding InscricaoEstadual}" Name="txtInscricaoEstadual" HorizontalAlignment="Left" Height="22" Margin="102,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="202"/>
+        <TextBlock Name="tbInscricaoEstadual" HorizontalAlignment="Left" Margin="0,167,0,0" Text="Ins. Estadual:" TextWrapping="Wrap" VerticalAlignment="Top" FontStyle="Italic" FontSize="14" TextAlignment="Right" Height="23" Width="97"/>
+
+        <TextBox Text="{Binding Email}" Name="txtEmail" HorizontalAlignment="Left" Height="23" Margin="363,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="373"/>
+        <TextBlock Name="tbEmail" HorizontalAlignment="Left" Margin="309,169,0,0" TextWrapping="Wrap" Text="E-mail:" VerticalAlignment="Top" FontStyle="Italic" FontSize="14" TextAlignment="Right" Height="21" Width="49"/>
+
+        <!--Botão Salvar-->
+        <Controls:dn32ImageButton x:Name="btnSalvar"
+                                  Style="{DynamicResource dn32ButtonStyle}"
+                                  Text="Salvar"
+                                  NormalImage="/dn32Layout;component/img/salvar.png"
+                                  ImageSize="24" FontSize="12" Padding="0 2 0 2" Margin="0,0,10,10" Click="btnSalvar_Click"
+                                  Height="51" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="65"/>
+    </Grid>
+</Window>

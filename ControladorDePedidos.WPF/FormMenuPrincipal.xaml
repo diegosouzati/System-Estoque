@@ -1,0 +1,78 @@
+﻿<Window xmlns:Controls="clr-namespace:dn32ImageButton.Controls;assembly=dn32Layout"
+        x:Class="ControladorDePedidos.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ControladorDePedidos.WPF"
+        mc:Ignorable="d"
+        Title="DS System Comercio - Menu Principal" Height="371" Width="625.5"  ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FFCCCEDB" FontWeight="Bold" FontStyle="Italic" WindowStyle="None">
+
+    <Window.Resources>
+        <ResourceDictionary Source="/dn32Layout;component/Themes/dn32ImageButton.xaml"></ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Controls:dn32ImageButton x:Name="btnCliente"
+                                  Style="{DynamicResource dn32ButtonStyle}"
+                                  Text="Clientes"
+                                  NormalImage="/dn32Layout;component/img/clientes.png" 
+                                  HorizontalAlignment="Left" VerticalAlignment="Top"
+                                  ImageSize="64" FontSize="14" Width="150" Height="116" Padding="0 2 0 2" Click="btnCliente_Click"/>
+
+        <Controls:dn32ImageButton x:Name="btnFornecedores"
+            Style="{DynamicResource dn32ButtonStyle}"
+            Text="Fornecedores"
+            NormalImage="/dn32Layout;component/img/fornecedores.png"
+            ImageSize="64" FontSize="14" Width="150" Height="116" Padding="0 2 0 2" Margin="160,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnFornecedores_Click"/>
+
+        <Controls:dn32ImageButton x:Name="btnUsuario"
+                                  Style="{DynamicResource dn32ButtonStyle}"
+                                  Text="Usuários"
+                                  NormalImage="/dn32Layout;component/img/usuarios.png"
+                                  ImageSize="64" FontSize="14" Width="150" Height="116" Padding="0 2 0 2" Margin="315,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnUsuario_Click"/>
+
+        <Controls:dn32ImageButton x:Name="btnVendas"
+            Style="{DynamicResource dn32ButtonStyle}"
+            Text="Vendas"
+            NormalImage="/dn32Layout;component/img/vendas.png"
+            ImageSize="64" FontSize="14" Width="150" Height="116" Padding="0 2 0 2" Margin="5,126,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnVendas_Click"/>
+
+        <Controls:dn32ImageButton x:Name="btnVendedores"
+            Style="{DynamicResource dn32ButtonStyle}"
+            Text="Vendedores"
+            NormalImage="/Controlador de pedidos;component/img/vendedores.png"
+            ImageSize="64" FontSize="14" Width="150" Height="116" Padding="0 2 0 2" Margin="160,126,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnVendedores_Click"/>
+
+        <Controls:dn32ImageButton x:Name="btnProdutos"
+                                  Style="{DynamicResource dn32ButtonStyle}"
+                                  Text="Produtos"
+                                  NormalImage="/dn32Layout;component/img/estoque.png"
+                                  HorizontalAlignment="Left" VerticalAlignment="Top"
+                                  ImageSize="64" FontSize="14" Width="150" Height="116" Padding="0 2 0 2" Margin="315,126,0,0" Click="btnProdutos_Click"/>
+
+        <Controls:dn32ImageButton x:Name="btnMarcas"
+            Style="{DynamicResource dn32ButtonStyle}"
+            Text="Marcas"
+            NormalImage="/dn32Layout;component/img/marca.png"
+            ImageSize="64" FontSize="14" Width="150" Height="116" Padding="0 2 0 2" Margin="470,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnMarcas_Click"/>
+
+        <Controls:dn32ImageButton x:Name="btnCompras"
+            Style="{DynamicResource dn32ButtonStyle}"
+            Text="Compras"
+            NormalImage="/dn32Layout;component/img/compras.png"
+            ImageSize="64" FontSize="14" Width="150" Height="116" Padding="0 2 0 2" Margin="470,126,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnCompras_Click"/>
+
+        <Controls:dn32ImageButton x:Name="btnSuporte"
+            Style="{DynamicResource dn32ButtonStyle}"
+            Text="Suporte"
+            NormalImage="/Controlador de pedidos;component/img/suporte.png"
+            ImageSize="64" FontSize="14" Width="150" Height="116" Padding="0 2 0 2" Margin="5,247,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnSuporte_Click"/>
+
+        <Controls:dn32ImageButton x:Name="btnSair"
+            Style="{DynamicResource dn32ButtonStyle}"
+            Text="Sair"
+            NormalImage="/dn32Layout;component/img/excluir.png"
+            ImageSize="64" FontSize="14" Width="150" Height="116" Padding="0 2 0 2" Margin="160,247,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="btnSair_Click"/>
+
+    </Grid>
+</Window>
